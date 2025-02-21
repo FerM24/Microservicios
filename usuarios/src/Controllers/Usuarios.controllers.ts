@@ -6,4 +6,4 @@ export const getAll = (req: Request, res: Response) => {
     
 };
 
-//holaaaaaaaaaaaaaa
+//Q
