@@ -1,9 +1,18 @@
 import { Request, Response } from "express";
 
 export const getAll = (req: Request, res: Response) => {
-    // res.send("lista de productos");
-    res.status(200).json({ Hola: "Usuarios" });
-    
-};
+    const usuarios = [
+        {
+            id: "1",
+            nombre: "Dr. Ana López",
+            especialidad: "Neurología"
+        },
+        {
+            id: "2",
+            nombre: "Dr. Juan Osorio",
+            especialidad: "Traumatología"
+        }
+    ];
 
-//Q
+    res.status(200).json(usuarios);
+};
