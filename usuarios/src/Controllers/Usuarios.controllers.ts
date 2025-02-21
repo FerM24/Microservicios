@@ -5,3 +5,4 @@ export const getAll = (req: Request, res: Response) => {
     res.status(200).json({ Hola: "Usuarios" });
     
 };
+//hice mi primer comentario/cambio
