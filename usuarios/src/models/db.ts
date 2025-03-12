@@ -8,10 +8,10 @@ export const pool = mysql.createPool({
     database: "mi_tienda",
 });
 
-// Conexión a la base de datos
+// Conexión de prueba
 pool
     .query("SELECT 1")
-    .then(() => console.log("Conectado a MySQL"))
+    .then(() => console.log("✅ Conectado a MySQL"))
     .catch((err: any) => {
-        console.error("Error al conectar a MySQL:", err);
-    });
+        console.error("❌ Error al conectar a MySQL:", err);
+    });
