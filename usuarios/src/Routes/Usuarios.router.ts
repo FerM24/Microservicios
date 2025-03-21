@@ -1,17 +1,19 @@
 import { Router } from 'express';
-import {pool} from '../models//db';
-
+import {getAllUsuarios,postUsuario,putUsuario,deleteUsuario} 
+from '../Controllers/Usuarios.controllers';
 
 const router = Router();
 
-router.get('/all', async (req, res) => {
-    try {
-        const [rows] = await pool.query('SELECT * FROM productos');
-        res.json(rows);
-    } catch (error) {
-        console.error('Error al obtener productos:', error);
-        res.status(500).json({ error: 'Error en el servidor' });
-    }
-});
+// Obtener todos los usuarios
+router.get('/all', getAllUsuarios);
 
-export default router;
+// Crear un nuevo usuario
+router.post('/crear', postUsuario);
+
+// Modificar un usuario
+router.put('/modificar', putUsuario);
+
+// Eliminar un usuario
+router.delete('/eliminar:id', deleteUsuario);
+
+export default router; // Asegúrate de exportar el enrutador

@@ -5,6 +5,7 @@ import productosRouter from "./Routes/Usuarios.router";
 dotenv.config({ path: "./src/.env" });
  
 const app = express();
+app.use(express.json());
 const port = process.env.PORT;  
 // Usar las rutas de productos
 app.use("/usuarios", productosRouter);
